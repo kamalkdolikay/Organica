@@ -1,0 +1,22 @@
+header, section {
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+header {
+    top: 0;
+}
+
+section {
+    top: 0;
+}
+
+footer {
+    background-color: lightgreen;
+    color: white;
+}
+
+.footer-footer {
+    background-color: green;
+}
