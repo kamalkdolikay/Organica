@@ -1,16 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand mx-2 fs-2" (click)="goHomeBuddy()">LOGO</a>
-    <div>
-      <a class="nav-link active fs-2" aria-current="page" (click)="goHomeBuddy()"><i class="bi bi-house fs-2"></i></a>
-    </div>
-    <div class="d-flex">
-      <a *ngIf="!isLogin" class="nav-link active mx-2 fs-5" aria-current="page" (click)="onLogin()">Login / Sign up</a>
-      <a *ngIf="isLogin" class="nav-link active mx-2 fs-5" aria-current="page" (click)="onLogout()">Logout</a>
-      <a *ngIf="!isLogin" class="nav-link active mx-2 fs-4" aria-current="page" (click)="accountPage()"><i class="bi bi-person-circle"></i></a>
-    </div>
-  </div>
-</nav>
+<app-nav></app-nav>
 
 <header class="py-3 field-img">
   <div class="row" id="box-search">
