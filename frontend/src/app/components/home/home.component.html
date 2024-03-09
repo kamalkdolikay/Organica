@@ -1,26 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand mx-2 fs-2" (click)="goHomeBuddy()">LOGO</a>
-    <div>
-      <a class="nav-link active fs-2" aria-current="page" (click)="goHomeBuddy()"><i class="bi bi-house fs-2"></i></a>
-    </div>
-    <div class="d-flex">
-      <a *ngIf="!isLogin" class="nav-link active mx-2 fs-5" aria-current="page" (click)="onLogin()">Login / Sign up</a>
-      <a *ngIf="isLogin" class="nav-link active mx-2 fs-5" aria-current="page" (click)="onLogout()">Logout</a>
-      <a *ngIf="isLogin" class="nav-link active mx-2 fs-4" aria-current="page"><i class="bi bi-person-circle"></i></a>
-    </div>
-  </div>
-</nav>
+<app-nav></app-nav>
 
 <header class="py-3">
   <div class="text-center my-5">
     <p class="text-black fs-5 mb-0">Welcome to</p>
-    <h1 class="text-black fs-1 fw-bolder">Farm 2 Plate</h1>
+    <h1 class="text-black fs-1 fw-bolder">Organica</h1>
     <button class="btn btn-primary">Browse Products</button>
   </div>
 </header>
 
-<section class="py-5">
+<section>
   <div class="container">
     <div class="row">
       <div class="col-lg">
@@ -45,10 +33,13 @@
   </div>
 </section>
 
-<section class="py-5">
+<section>
   <div class="container">
     <div class="row">
-      <div class="s23-main-body col-lg" style="background-color: #21976f;">
+      <div class="col-lg">
+        <img src="assets/images/studentBills.jpg" class="img-thumbnail img-fluid" />
+      </div>
+      <div class="s23-main-body col-lg" style="background-color: #4a773c;">
         <div class="s23-app-card">
           <div class="s23-app-body">
             <div class="s23-app-users-container">
@@ -62,20 +53,17 @@
           </div>
         </div>
       </div>
-      <div class="col-lg">
-        <img src="assets/images/studentBills.jpg" class="img-thumbnail img-fluid" />
-      </div>
     </div>
   </div>
 </section>
 
-<section class="py-5">
+<section>
   <div class="container">
     <div class="row">
       <div class="col-lg">
         <img src="assets/images/healthyFoods.jpg" class="img-thumbnail img-fluid" />
       </div>
-      <div class="s23-main-body col-lg" style="background-color: #fc4f3e;">
+      <div class="s23-main-body col-lg" style="background-color: #da291c;">
         <div class="s23-app-card">
           <div class="s23-app-body">
             <div class="s23-app-users-container">
@@ -94,10 +82,13 @@
   </div>
 </section>
 
-<section class="py-5">
+<section>
   <div class="container">
     <div class="row">
-      <div class="s23-main-body col-sm" style="background-color: #078ef1 ;">
+      <div class="col-lg">
+        <img src="assets/images/communityProduce.jpg" class="img-thumbnail img-fluid" />
+      </div>
+      <div class="s23-main-body col-sm" style="background-color: #0076a5;">
         <div class="s23-app-card">
           <div class="s23-app-body">
             <div class="s23-app-users-container">
@@ -112,26 +103,8 @@
           </div>
         </div>
       </div>
-      <div class="col-lg">
-        <img src="assets/images/communityProduce.jpg" class="img-thumbnail img-fluid" />
-      </div>
     </div>
   </div>
 </section>
 
-<footer class="text-center">
-  <div class="py-4 d-flex justify-content-center align-items-center">
-    <span class="me-3">Register for free</span>
-    <button type="button" class="btn btn-outline-light btn-rounded">
-      Sign up!
-    </button>
-  </div>
-
-  <div class="text-center py-3 footer-footer">
-    2024 :
-    <a class="text-white"
-      href="https://qds-hacks-2024.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio">
-      QDS Hackathon
-    </a>
-  </div>
-</footer>
+<app-footer></app-footer>

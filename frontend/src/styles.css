@@ -27,6 +27,22 @@ a {
     color: rgba(74, 119, 60);
 }
 
+.c-red {
+    color: #da291c;
+}
+
+.c-blue {
+    color: rgb(0, 118, 165);
+}
+
+.c-purple {
+    color: rgb(111, 80, 145);
+}
+
+.c-pink-purp {
+    color: rgb(198, 54, 99);
+}
+
 .c-white {
     color: white;
 }

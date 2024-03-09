@@ -1,5 +1,15 @@
-.navbar-toggler {
-    border: none;
+.thumbnail {
+    position: relative;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.caption {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    color: white;
 }
 
 header, section {
@@ -14,19 +24,6 @@ header {
 
 section {
     top: 0;
-}
-
-a {
-    cursor: pointer;
-}
-
-footer {
-    background-color: lightgreen;
-    color: white;
-}
-
-.footer-footer {
-    background-color: green;
 }
 
 .s23-main-body {
