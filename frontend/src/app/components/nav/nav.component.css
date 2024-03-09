@@ -8,6 +8,7 @@ a {
 
 .navbar-expand-lg {
     height: 100px;
+    font-family: Nunito;
 }
 
 .app-nav {
@@ -16,4 +17,5 @@ a {
 
 .log-btn {
     border: none;
+    padding: 7px 11px;
 }

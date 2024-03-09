@@ -1,25 +1,27 @@
-<div class="card container text-center p-5 mt-5 rounded-0 bg-yellow">
+<app-nav></app-nav>
+
+<div class="card container login-card p-5 my-5 rounded-0">
     <div class="mb-5">
         <h1 class="mb-4 c-green">
             Login
         </h1>
         <form (ngSubmit)="onLogin()">
             <div class="form-floating mb-3">
-                <input type="email" class="form-control rounded-0" name="username" [(ngModel)]="username" id="username" placeholder="name@example.com">
+                <input type="email" class="form-control rounded-4" name="username" [(ngModel)]="username" id="username" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-0" name="password" [(ngModel)]="password" id="password" placeholder="Password">
+                <input type="password" class="form-control rounded-4" name="password" [(ngModel)]="password" id="password" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <input type="submit" value="Create Account" class="btn btn-lg w-50 mx-auto rounded-0 bg-green c-white">
+            <input type="button" value="Login" class="login-btn w-50 mx-auto rounded-4 bg-green c-white">
         </form>
     </div>
     <div class="mb-3">
         <h5>
             Don't have an account?
         </h5>
-        <a href="./sign-up.html">Create an account ></a>
+        <a (click)="redirectRegister()">Create an account ></a>
     </div>
     <div>
         <h5>
@@ -27,3 +29,5 @@
         </h5>
     </div>
 </div>
+
+<app-footer></app-footer>

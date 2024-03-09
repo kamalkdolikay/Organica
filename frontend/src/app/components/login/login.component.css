@@ -1,0 +1,12 @@
+a {
+    cursor: pointer;
+}
+
+.login-card {
+    text-align: center;
+}
+
+.login-btn {
+    border: none;
+    padding: 10px 7px;
+}
