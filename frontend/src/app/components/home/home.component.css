@@ -24,19 +24,6 @@ section {
     top: 0;
 }
 
-a {
-    cursor: pointer;
-}
-
-footer {
-    background-color: lightgreen;
-    color: white;
-}
-
-.footer-footer {
-    background-color: green;
-}
-
 .s23-main-body {
     max-width: 600px;
     min-width: 100px;
