@@ -36,4 +36,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/login'])
   }
 
+  accountPage() {
+    this.router.navigate(['/account'])
+  }
+
 }
