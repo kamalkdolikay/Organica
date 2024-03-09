@@ -1,0 +1,40 @@
+#main_con{
+    height: 60vh;
+    overflow-y: scroll;
+    /* display: none; */
+}
+
+#searchbar{
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    justify-content: center;
+}
+
+.col{
+    padding: 0px;
+    padding-bottom: 2.5vh;
+}
+
+footer{
+    height: 2.5vh;
+    background-color: yellowgreen;
+    align-content: center;
+    /* border-style: solid; */
+}
+
+#sorter{
+    align-content: right;
+    display:grid;
+    grid-template-columns: 70%, 20%, 10%;
+    padding-bottom: 2.5vh;
+}
+
+#sort, #sorter > label{
+    /* width: 100%; */
+    /* justify-items: right; */
+    grid-column: 3;
+}
+
+#sorter > p{
+    grid-row: 2;
+}
