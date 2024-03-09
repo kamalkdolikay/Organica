@@ -4,6 +4,7 @@
 node_modules/
 .vscode/
 package-lock.json
+public/
 
 # Compiled output
 frontend/dist
