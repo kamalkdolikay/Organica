@@ -7,15 +7,15 @@ const productSchema = mongoose.Schema(
         required: [true, 'Please add a name']
     },
     price: {
-        type: String,
+        type: Number,
         required: [true, 'Please add a price'],
     },
-    status: {
-        type: String,
-        required: [true, 'Please add a status'],
+    current: {
+        type: Number,
+        // required: [true, 'Please add a status'],
     },
-    description: {
-        type: String,
+    min: {
+        type: Number,
         required: [true, 'Please add a description'],
     },
     user: {
