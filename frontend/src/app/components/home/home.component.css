@@ -29,4 +29,22 @@ footer {
 .footer-footer {
     background-color: green;
 }
-  
+
+.s23-main-body {
+    max-width: 600px;
+    min-width: 100px;
+    background-color: #6962d9;
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #ececf1;
+}
+
+.s23-app-card {
+    min-height: 10px;
+    padding-bottom: 30px;
+}
+
+.s23-app-users-container {
+    width: 100%;
+    padding: 35px 40px 0;
+}
