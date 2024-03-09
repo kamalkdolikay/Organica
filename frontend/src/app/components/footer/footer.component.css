@@ -1,10 +1,5 @@
 footer {
-    background-color: lightgreen;
     color: white;
     position: sticky;
     top: 100%;
-}
-
-.footer-footer {
-    background-color: green;
 }
