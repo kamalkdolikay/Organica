@@ -9,8 +9,8 @@
                     class="bi bi-house fs-1"></i></a>
         </div> -->
         <div class="d-flex align-items-center">
-            <button *ngIf="!isLogin" type="button" class="log-btn mx-2 fs-3 bg-green c-white rounded-5 p-3" (click)="onLogin()">Login</button>
-            <button *ngIf="isLogin" type="button" class="log-btn mx-2 fs-3 bg-green c-white rounded-5" (click)="onLogin()">Logout</button>
+            <button *ngIf="!isLogin" type="button" class="log-btn mx-2 fs-5 bg-green c-white rounded-5" (click)="onLogin()">Login</button>
+            <button *ngIf="isLogin" type="button" class="log-btn mx-2 fs-5 bg-green c-white rounded-5" (click)="onLogin()">Logout</button>
             <a *ngIf="isLogin" class="nav-link active mx-2 fs-1" aria-current="page" (click)="accountPage()"><i
                     class="bi bi-person-circle"></i></a>
         </div>
