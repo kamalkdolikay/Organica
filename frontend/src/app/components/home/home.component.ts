@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
      }
   }
 
+  goHomeBuddy() {
+    this.router.navigate([''])
+  }
+
   onLogin() {
     this.router.navigate(['/login'])
   }

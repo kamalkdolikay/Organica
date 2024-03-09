@@ -16,6 +16,10 @@ section {
     top: 0;
 }
 
+a {
+    cursor: pointer;
+}
+
 footer {
     background-color: lightgreen;
     color: white;
