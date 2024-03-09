@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consumer Landing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./supplier.css">
+
+</head>
+
+<div class="p-3 mb-2 bg-dark-subtle text-dark-emphasis">
+    <header id="navbarPlaceholder"></header>
+    <div class="container" id="main">
+        <div class="px-4 py-5 my-5 text-center" id="welcome">
+            <img class="d-block mx-auto mb-4" src="/img/logo.jpg" alt="logo or profile pic" width="72" height="57">
+            <h1 class="display-5 fw-bold text-body-emphasis">Welcome back [supplier name]</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">What would you like to do today?</br></p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">View catalogue</button>
+                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Change Profile</button>
+                </div>
+            </div>
+        </div>
+        <div id="changeProfile">
+            <div class="container text=center" id="acountChange">
+                <div class="row justify-content-md-center">
+                    <h4 class="mb-3">Login details</h4>
+                    <span class="border border-4 rounded">
+                        <form>
+                            <div class="mb-3">
+                                <label for="emailChange" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="emailChange" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">Switch to a new email.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordChange" class="form-label">New Password</label>
+                                <input type="password" class="form-control" id="passwordChange"
+                                    aria-describedby="passChange">
+                                <div id="passChange" class="form-text">Change your current password.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="passwordChangeConfirm" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="passwordChangeConfirm"
+                                    aria-describedby="passConfirm">
+                                <div id="passConfirm" class="form-text">Confirm new password.</div>
+                            </div>
+                            <button type="button" class="btn btn-success" id="loginConfirmBtn">Confirm</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
+            <div class="container text=center" id="changeBanking">
+                <div class="row justify-content-md-center">
+                    <h4 class="mb-3">Banking details</h4>
+                    <span class="border border-4 rounded">
+                        <form class="needs-validation" novalidate="">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <label for="firstName" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid first name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="lastName" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Valid last name is required.
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Please enter your shipping address.
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="address2" class="form-label">Address 2 <span
+                                            class="text-body-secondary">(Optional)</span></label>
+                                    <input type="text" class="form-control" id="address2"
+                                        placeholder="Apartment or suite">
+                                </div>
+
+                                <div class="col-md-5">
+                                    <label for="country" class="form-label">Country</label>
+                                    <select class="form-select" id="country" required="">
+                                        <option value="">Choose...</option>
+                                        <option>Canada</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid country.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="province" class="form-label">Province</label>
+                                    <select class="form-select" id="province" required="">
+                                        <option value="">Choose...</option>
+                                        <option>British Columbia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid province.
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="postal" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="postal" placeholder="" required="">
+                                    <div class="invalid-feedback">
+                                        Postsal code required.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="same-address">
+                                <label class="form-check-label" for="same-address">Shipping address is the same as my
+                                    billing
+                                    address</label>
+                            </div>
+                            <hr class="my-4">
+
+                            <h4 class="mb-3">Payment</h4>
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label for="cc-name" class="form-label">Name on account</label>
+                                    <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                                    <small class="text-body-secondary">Full name as displayed on account</small>
+                                    <div class="invalid-feedback">
+                                        Name on account is required
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cc-number" class="form-label">Account number</label>
+                                    <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                                    <div class="invalid-feedback">
+                                        Credit card number is required
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="cc-expiration" class="form-label">Expiration</label>
+                                    <input type="text" class="form-control" id="cc-expiration" placeholder=""
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Expiration date required
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="cc-cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                                    <div class="invalid-feedback">
+                                        Security code required
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                        </form>
+                        <button type="button" class="btn btn-success" id="loginConfirmBtn">Confirm</button>
+
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div id="viewOrder">
+            <table class="table table-striped">
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td>Box of Eggs</td>
+                    <td>3</td>
+                    <td>$5.00</td>
+                    <td>$15.00</td>
+                </tr>
+                <tr>
+                    <td>Envy Apples</td>
+                    <td>8</td>
+                    <td>$1.00</td>
+                    <td>$8.00</td>
+                </tr>
+                <tr>
+                    <td>Celery</td>
+                    <td>2</td>
+                    <td>$2.00</td>
+                    <td>$4.00</td>
+                </tr>
+                <tr>
+                    <td><b>TOTAL</b></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>$27.00</b></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    </body>
+
+</html>
