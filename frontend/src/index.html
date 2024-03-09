@@ -1,16 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farm to Table</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <app-root></app-root>
-  <script src="https://kit.fontawesome.com/c5ac74b016.js" crossorigin="anonymous"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FarmToPlate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <!-- angular -->
+    <app-root></app-root>
+    <script src="https://kit.fontawesome.com/c5ac74b016.js" crossorigin="anonymous"></script>
+    <!-- angular -->
+
+    <header class="py-3">
+      <div class="text-center my-5">
+        <p class="text-black fs-5 mb-0">Welcome to</p>
+        <h1 class="text-black fs-1 fw-bolder">Farm 2 Plate</h1>
+        <button class="btn btn-primary">Browse Products</button>
+      </div>
+    </header>
+    
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <img src="assets/images/farmerHoldingProduce.jpg" class="img-thumbnail img-fluid"/>
+          </div>
+          <div class="col-lg">
+            <h1>Our Mission</h1>
+            <p>At the intersection of affordability, health, and community lies our mission to address the unique challenges faced by students at BCIT. By identifying the pressing issues of financial strain, dietary concerns, and social isolation, we endeavor to offer practical solutions through our app. Through direct engagement with local farmers, promotion of nutritious eating habits, and fostering of community ties, we strive to empower BCIT students to lead healthier, more connected lives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <h1>Financial Relief</h1>
+            <p>Recognizing the escalating costs of living and studying, particularly for students at BCIT, we acknowledge the strain imposed by rising grocery prices. Through our app, we aim to mitigate this burden by establishing a direct link between consumers and local farmers. By cutting out intermediaries, we offer cost-effective alternatives to conventional grocery shopping, easing the financial strain experienced by students amidst tuition and rental expenses.</p>
+          </div>
+          <div class="col-lg">
+            <img src="assets/images/studentBills.jpg" class="img-thumbnail img-fluid"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <img src="assets/images/healthyFoods.jpg" class="img-thumbnail img-fluid"/>
+          </div>
+          <div class="col-lg">
+            <h1>Hollistic Wellness</h1>
+            <p>Amidst the hectic pace of student life, maintaining a balanced diet often takes a backseat, impacting both physical and mental health. Our initiative advocates for a shift towards whole foods sourced directly from local farmers. By prioritizing nutrient-rich options, we aim to enhance the overall well-being of BCIT students. Improved nutrition not only supports physical health but also contributes to mental resilience, fostering a conducive environment for academic success and personal growth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h1>Community Engagement</h1>
+            <p>In a fast-paced urban environment, the sense of community can often be elusive. Our platform seeks to bridge this gap by facilitating connections between students and local food suppliers. Beyond mere transactions, we envision a vibrant community where students engage in meaningful exchanges, sharing recipes, cooking tips, and experiences centered around locally sourced ingredients. By cultivating these connections, we aim to instill a sense of belonging and camaraderie among BCIT students, enriching their university experience.</p>
+          </div>
+          <div class="col-lg">
+            <img src="assets/images/communityProduce.jpg" class="img-thumbnail img-fluid"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <div class="py-4 d-flex justify-content-center align-items-center">
+        <span class="me-3">Register for free</span>
+        <button type="button" class="btn btn-outline-light btn-rounded">
+          Sign up!
+        </button>
+      </div>
+  
+      <div class="text-center py-3 footer-footer">
+        2024 : 
+        <a class="text-white" href="https://qds-hacks-2024.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=portfolio">
+          QDS Hackathon
+        </a>
+      </div>
+    </footer>
+
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  </body>
 </html>
