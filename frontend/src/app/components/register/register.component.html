@@ -1,0 +1,36 @@
+<div class="card container text-center p-5 mt-5 rounded-0 bg-yellow">
+    <div class="mb-5">
+        <h1 class="mb-4">
+            Create an Account
+        </h1>
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+                <a class="nav-link bg-green c-white" aria-current="page" href="#">Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link c-black" href="#">Suppliers</a>
+            </li>
+        </ul>
+        <form (submit)="onRegister()">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-0" [(ngModel)]="name" name="name" id="floatingName" placeholder="Name">
+                <label for="floatingInput">Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control rounded-0" [(ngModel)]="email" name="email" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control rounded-0" [(ngModel)]="password" name="password" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <input type="submit" value="Create Account" class="btn btn-lg w-50 mx-auto rounded-0 bg-green c-white">
+        </form>
+    </div>
+    <div>
+        <h5>
+            Already have an account?
+        </h5>
+        <a href="./sign-up.html">Login ></a>
+    </div>
+</div>
