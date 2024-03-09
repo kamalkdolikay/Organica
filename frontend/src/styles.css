@@ -1,5 +1,36 @@
 @font-face {
     font-family: cusFont;
-    src: url(./assets/ADAM.CG\ PRO.otf);
+    src: url("./assets/ADAM.CG\ PRO.otf");
 }
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Color Pallete Here: */
+
+.bg-yellow {
+    background-color: rgba(255, 205, 0);
+}
+
+.bg-green {
+    background-color: rgba(74, 119, 60);
+}
+
+.c-green {
+    color: rgba(74, 119, 60);
+}
+
+.c-white {
+    color: white;
+}
+
+.c-black {
+    color: black;
+}
