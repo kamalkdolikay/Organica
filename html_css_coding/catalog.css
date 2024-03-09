@@ -33,8 +33,12 @@ footer{
     /* width: 100%; */
     /* justify-items: right; */
     grid-column: 3;
+    margin-right: 5vw;
+    
 }
 
 #sorter > p{
     grid-row: 2;
+    margin-left: 5vw;
+    /* background-color: aquamarine; */
 }
