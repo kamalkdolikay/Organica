@@ -1,5 +1,6 @@
 .thumbnail {
     position: relative;
+    max-width: 100vw;
 }
 
 .caption {
