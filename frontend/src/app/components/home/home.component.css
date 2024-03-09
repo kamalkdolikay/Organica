@@ -1,5 +1,13 @@
-.navbar-toggler {
-    border: none;
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    color: white;
 }
 
 header, section {
