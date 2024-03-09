@@ -1,29 +1,9 @@
-.thumbnail {
-    position: relative;
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-.caption {
-    position: absolute;
-    top: 15%;
-    left: 0;
-    width: 100%;
-    color: white;
-}
-
-header, section {
-    background-color: white;
-    position: sticky;
-    position: -webkit-sticky;
-}
-
-header {
-    top: 0;
+section img {
+    border-radius: 32px;
 }
 
 section {
-    top: 0;
+    border-radius: 32px;
 }
 
 .s23-main-body {
