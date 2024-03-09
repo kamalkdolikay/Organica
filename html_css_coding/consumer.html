@@ -25,10 +25,10 @@
             </div>
         </div>
         <div id="changeProfile">
-            <div class="container text=center"  id="acountChange">
+            <div class="container text=center" id="acountChange">
                 <div class="row justify-content-md-center">
-                    <div class="col-3"></div>
-                    <div class="col-4">
+                    <h4 class="mb-3">Login details</h4>
+                    <span class="border border-4 rounded">
                         <form>
                             <div class="mb-3">
                                 <label for="emailChange" class="form-label">Email address</label>
@@ -37,24 +37,24 @@
                             </div>
                             <div class="mb-3">
                                 <label for="passwordChange" class="form-label">New Password</label>
-                                <input type="password" class="form-control" id="passwordChange" aria-describedby="passChange">
+                                <input type="password" class="form-control" id="passwordChange"
+                                    aria-describedby="passChange">
                                 <div id="passChange" class="form-text">Change your current password.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="passwordChangeConfirm" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="passwordChangeConfirm" aria-describedby="passConfirm">
+                                <input type="password" class="form-control" id="passwordChangeConfirm"
+                                    aria-describedby="passConfirm">
                                 <div id="passConfirm" class="form-text">Confirm new password.</div>
                             </div>
                         </form>
-                    </div>
-                    <div class="col-3"></div>
+                    </span>
                 </div>
             </div>
-            <div class="container text-center" id="changeBanking">
+            <div class="container text-center grid gap-0 row-gap-3" id="changeBanking">
                 <div class="row justify-content-md-center">
-                    <div class="col-2"></div>
-                    <div class="col-6">
-                        <h4 class="mb-3">Billing address</h4>
+                    <h4 class="mb-3">Billing address</h4>
+                    <span class="border border-4 rounded">
                         <form class="needs-validation" novalidate="">
                             <div class="row g-3">
                                 <div class="col-sm-6">
@@ -87,7 +87,8 @@
                                 <div class="col-12">
                                     <label for="address2" class="form-label">Address 2 <span
                                             class="text-body-secondary">(Optional)</span></label>
-                                    <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                                    <input type="text" class="form-control" id="address2"
+                                        placeholder="Apartment or suite">
                                 </div>
 
                                 <div class="col-md-5">
@@ -134,19 +135,14 @@
 
                             <div class="my-3">
                                 <div class="form-check">
-                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked=""
-                                        required="">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                        checked="" required="">
                                     <label class="form-check-label" for="credit">Credit card</label>
                                 </div>
                                 <div class="form-check">
                                     <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
                                         required="">
                                     <label class="form-check-label" for="debit">Debit card</label>
-                                </div>
-                                <div class="form-check">
-                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
-                                        required="">
-                                    <label class="form-check-label" for="paypal">PayPal</label>
                                 </div>
                             </div>
 
@@ -170,7 +166,8 @@
 
                                 <div class="col-md-3">
                                     <label for="cc-expiration" class="form-label">Expiration</label>
-                                    <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                                    <input type="text" class="form-control" id="cc-expiration" placeholder=""
+                                        required="">
                                     <div class="invalid-feedback">
                                         Expiration date required
                                     </div>
@@ -186,8 +183,7 @@
                             </div>
                             <hr class="my-4">
                         </form>
-                    </div>
-                    <div class="col-2"></div>
+                    </span>
                 </div>
             </div>
         </div>
@@ -214,7 +210,7 @@
                 <tr>
                     <td>Celery</td>
                     <td>2</td>
-                    <td>$2</td>
+                    <td>$2.00</td>
                     <td>$4.00</td>
                 </tr>
                 <tr>
