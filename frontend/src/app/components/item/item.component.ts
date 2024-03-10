@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ItemComponent implements OnInit {
 
+  isLogin: boolean = false;
   public productID:any;
   public prods:any;
   public items:Array<any> = new Array(4);
@@ -35,20 +36,29 @@ export class ItemComponent implements OnInit {
         this.prods = data;
       });
 
-    }
+      let token = this.authService.loadToken()
+      if(token) {
+        this.isLogin = true
+      } else {
+        this.isLogin = false
+      }
+
+  }
 
     addToCart(){
-      this.isCart = localStorage.getItem('cart');
-      if(this.isCart == null){
-        let arr: any = [];
-        this.product["quantity"] = this.quantity;
-        arr.push(this.product);
-        localStorage.setItem('cart', JSON.stringify(arr));
-      } else {
-        let arr: any = JSON.parse(this.isCart);
-        this.product["quantity"] = this.quantity;
-        arr.push(this.product)
-        localStorage.setItem('cart', JSON.stringify(arr));
+      if(this.isLogin){
+        this.isCart = localStorage.getItem('cart');
+        if(this.isCart == null){
+          let arr: any = [];
+          this.product["quantity"] = this.quantity;
+          arr.push(this.product);
+          localStorage.setItem('cart', JSON.stringify(arr));
+        } else {
+          let arr: any = JSON.parse(this.isCart);
+          this.product["quantity"] = this.quantity;
+          arr.push(this.product)
+          localStorage.setItem('cart', JSON.stringify(arr));
+        }
       }
     }
 

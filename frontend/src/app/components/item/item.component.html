@@ -28,10 +28,13 @@
                                     <h5 class="modal-title">Order Added to Profile!</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body">
+                                <div *ngIf="isLogin" class="modal-body">
                                     <p>You will be updated for when this order is ready for pickup.</p>
                                 </div>
-                                <div class="modal-footer">
+                                <div *ngIf="!isLogin" class="modal-body">
+                                    <p>Please Sign in to add</p>
+                                </div>
+                                <div *ngIf="isLogin" class="modal-footer">
                                     <button type="button" class="btn btn-secondary"
                                         data-bs-dismiss="modal">Undo</button>
                                     <button type="button" class="btn btn-primary bg-green"
