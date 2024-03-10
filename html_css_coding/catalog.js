@@ -1,11 +1,14 @@
 // import;
 
 // const { getProducts } = require("../controllers/productsController");
-
+var but = document.querySelector("#search_button");
 var sortButton = document.querySelector("#sort");
 var cardBody = document.querySelectorAll(".card");
 
 sortButton.addEventListener("change", sortList);
+but.addEventListener("click", function(){
+    
+});
 
 window.addEventListener("load", (event) => {
     showCards();
@@ -35,5 +38,5 @@ function test(){
 
 function showCards(){
     
-    console.log(temp);
+    console.log("a");
 }
