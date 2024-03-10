@@ -25,6 +25,11 @@ export class AuthService {
     return this.http.get(this.apiUrl2+'/get',httpOptions);
   }
 
+  getProduct(id:any) {
+    return this.http.post(this.apiUrl2+'/info',id, httpOptions)
+    .pipe(map((res: any) => res));
+  }
+
   register(user:any) {
     return this.http.post(this.apiUrl+'/register',user,httpOptions);
   }
