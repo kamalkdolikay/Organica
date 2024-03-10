@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler');
 const Products = require('../models/productsModel.js');
 
 const addProduct = asyncHandler(async (req, res) => {
-    const { name, price, min, imgLink} = req.body
+    const { name, price, min, image, current} = req.body
 
     if(!name || !price || !min || !imgLink) {
         res.status(400)
@@ -12,10 +12,10 @@ const addProduct = asyncHandler(async (req, res) => {
     const product = await Products.create({
         name:name,
         price:price,
-        current: 0,
+        current: current,
         min:min,
-        user: req.user.id,
-        imgLink:imgLink
+        image:image,
+        user: req.user.id
     })
 
     res.status(200).json(product)

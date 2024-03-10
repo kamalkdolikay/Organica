@@ -22,6 +22,10 @@ const productSchema = mongoose.Schema(
         type: String,
         required: [true, 'Please add a link'],
     },
+    image: {
+        type: String,
+        required: [true, 'Please add a image']
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
