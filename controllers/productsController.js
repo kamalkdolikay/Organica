@@ -24,9 +24,16 @@ const addProduct = asyncHandler(async (req, res) => {
 const getProducts = asyncHandler(async (req, res) => {
     const products = await Products.find({});
     res.status(200).json(products);
+});
+
+const getProductsinfo = asyncHandler(async (req, res) => {
+    console.log('id', req.body.is)
+    const products = await Products.find({_id: req.body.id});
+    res.status(200).json(products);
 })
 
 module.exports = {
     addProduct,
     getProducts,
+    getProductsinfo,
 }

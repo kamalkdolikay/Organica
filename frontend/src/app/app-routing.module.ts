@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { ConsumerComponent } from './components/consumer/consumer.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ItemComponent } from './components/item/item.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent,
+  },
+  {
+    path: 'item/:id',
+    component: ItemComponent,
   },
 ];
 
