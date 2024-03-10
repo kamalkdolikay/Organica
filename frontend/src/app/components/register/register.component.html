@@ -1,8 +1,8 @@
 <app-nav></app-nav>
 
-<div class="register-cmp card container text-center p-5 my-5 rounded-4 w-75">
+<div class="register-cmp card container p-5 my-5 rounded-0">
     <div class="mb-1">
-        <h1 class="mb-4">
+        <h1 class="mb-4 text-center">
             Create an Account
         </h1>
         <ul class="nav nav-tabs nav-fill">
@@ -34,15 +34,114 @@
                     id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Confirm Password</label>
             </div>
+            <div>
+                <div class="text-center">
+                    <button class="info-btn bg-green c-white rounded-4 mb-3" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#info" aria-expanded="false" aria-controls="info">
+                        Enter Billing Info Now
+                    </button>
+                </div>
 
-            <input type="submit" value="Create Account" class="regi-btn mx-auto rounded-4 bg-green c-white">
+                <div class="collapse" id="info">
+                    <h3 class="my-3 text-center">Billing Info</h3>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" id="floatingInput1" placeholder="">
+                            <label for="floatingInput1">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" id="floatingPassword1" placeholder="">
+                            <label for="floatingPassword1">Last Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" name="password" id="floatingPassword2"
+                                placeholder="Password">
+                            <label for="floatingPassword2">Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" name="password" id="floatingPassword2"
+                                placeholder="Password">
+                            <label for="floatingPassword2">Address 2 (Optional)</label>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col">
+                                <label for="country" class="form-label">Country:</label>
+                                <select class="form-select rounded-4" id="country" required="">
+                                    <option value="">Choose...</option>
+                                    <option>Canada</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="province" class="form-label">Province:</label>
+                                <select class="form-select rounded-4" id="province" required="">
+                                    <option value="">Choose...</option>
+                                    <option>British Columbia</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="floatingPassword3" class="form-label">Postal Code</label>
+                                <input type="text" class="form-control rounded-4" id="floatingPassword3" placeholder="">
+                            </div>
+                            <hr class="mt-3">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="same-address">
+                                <label class="form-check-label" for="same-address">Shipping address is the same as my
+                                    billing address</label>
+                            </div>
+                            <hr class="mt-3">
+                            <h3 class="my-3 text-center">Payment Info</h3>
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                        checked="" required="">
+                                    <label class="form-check-label" for="credit">Credit card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="debit" name="paymentMethod" type="radio" class="form-check-input"
+                                        required="">
+                                    <label class="form-check-label" for="debit">Debit card</label>
+                                </div>
+                                <div class="form-check">
+                                    <input id="paypal" name="paymentMethod" type="radio" class="form-check-input"
+                                        required="">
+                                    <label class="form-check-label" for="paypal">PayPal</label>
+                                </div>
+                            </div>
+                            <div class="mx-auto">
+                                <div class="col">
+                                    <label for="inputPassword5" class="form-label">Name on Card</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                                <div class="">
+                                    <div class="mt-2">
+                                        <label for="inputPassword5" class="form-label">Number on Card</label>
+                                        <input type="password" id="inputPassword5" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2 mx-auto">
+                                <div class="">
+                                    <label for="inputPassword5" class="form-label">Expiration</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                                <div class="mt-2">
+                                    <label for="inputPassword5" class="form-label">CVV</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <input type="submit" value="Create Account" class="regi-btn mx-auto rounded-4 bg-green c-white">
+                <h5 class="mt-4">
+                    Already have an account?
+                </h5>
+                <a (click)="redirectLogin()">Login ></a>
+            </div>
         </form>
-    </div>
-    <div>
-        <h5>
-            Already have an account?
-        </h5>
-        <a (click)="redirectLogin()">Login ></a>
     </div>
 </div>
 
