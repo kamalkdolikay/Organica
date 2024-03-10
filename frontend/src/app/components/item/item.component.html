@@ -14,10 +14,29 @@
                 <p class="lead">{{compareItem(product?.name)}}</p>
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                    <button class="btn btn-outline-dark flex-shrink-0 rounded-4" type="button">
-                        <i class="bi-cart-fill me-1"></i>
-                        Add to cart
+                    <button class="btn btn-outline-dark flex-shrink-0 rounded-4" type="button" data-bs-toggle="modal" data-bs-target="#order-conf">
+                        <i class="bi bi-plus-lg"></i>
+                        Add Order
                     </button>
+                    <div class="modal fade" tabindex="-1" id="order-conf">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Order Added to Profile!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>You will be updated for when this order is ready for pickup.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Undo</button>
+                                    <button type="button" class="btn btn-primary bg-green"
+                                        data-bs-dismiss="modal">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -28,22 +47,79 @@
     <div class="container px-4 px-lg-5 mt-5">
         <h2 class="fw-bolder mb-4">Related products</h2>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5" *ngFor="let x of prods | slice:0:4">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <img class="card-img-top" src="assets/images/AdobeStock_119010747.jpeg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
-                            <h5 class="fw-bolder">Fancy Product</h5>
+                            <h5 class="fw-bolder">Willingdon Lettuce</h5>
                             <!-- Product price-->
                             $40.00 - $80.00
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" href="#">View options</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" href="/item/65ed1d3232d31d0043db357e">View options</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="assets/images/AdobeStock_121470119.jpeg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Fleetwood Tomatoes</h5>
+                            <!-- Product price-->
+                            $40.00 - $80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" href="/item/65ed1d5c32d31d0043db358a">View options</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="assets/images/AdobeStock_233658182.jpeg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Abbortsford Grapes</h5>
+                            <!-- Product price-->
+                            $40.00 - $80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" href="/item/65ed1d8332d31d0043db3593">View options</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="assets/images/AdobeStock_104527224.jpeg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">New West Eggs</h5>
+                            <!-- Product price-->
+                            $40.00 - $80.00
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" href="/item/65ed1dbc32d31d0043db35a2">View options</a></div>
                     </div>
                 </div>
             </div>

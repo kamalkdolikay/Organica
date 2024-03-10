@@ -1,48 +1,50 @@
 <app-nav></app-nav>
 
-<div class="input-group" id="searchbar">
-    <div class="form-outline" data-mdb-input-init>
-        <input type="search" id="form1" class="form-control" placeholder="Search for Product" />
+<div class="prod-cmp">
+    <div class="input-group" id="searchbar">
+        <div class="form-outline" data-mdb-input-init>
+            <input type="search" id="form1" class="form-control" placeholder="Search for Product" />
+        </div>
+        <button type="button" class="btn btn-primary bg-green search-btn" data-mdb-ripple-init>
+            <i class="fas fa-search" (click)="test_f()"></i>
+        </button>
     </div>
-    <button type="button" class="btn btn-primary bg-green search-btn" data-mdb-ripple-init>
-        <i class="fas fa-search" (click)="test_f()"></i>
-    </button>
-</div>
-
-
-<form id="sorter">
-    <p><b>Showing Results for:</b></p>
-    <label for="sort">Sort By:</label>
-    <select name="cars" id="sort">
-        <option value="Date">Date</option>
-        <option value="Fulfilled">Fulfilled</option>
-    </select>
-</form>
-
-<section class="py-5 bg-light">
-    <div class="container px-4 px-lg-5 mt-5">
-        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5" *ngFor="let x of prods">
-                <div class="card h-100">
-                    <!-- Product image-->
-                    <img class="card-img-top" src={{x?.image}} alt="product image" />
-                    <!-- Product details-->
-                    <div class="card-body p-4">
-                        <div class="text-center">
-                            <!-- Product name-->
-                            <h5 class="fw-bolder">{{x?.name}}</h5>
-                            <!-- Product price-->
-                            $40.00 - $80.00
+    
+    
+    <form id="sorter">
+        <p><b>Showing Results for:</b></p>
+        <label for="sort">Sort By:</label>
+        <select name="cars" id="sort">
+            <option value="Date">Date</option>
+            <option value="Fulfilled">Fulfilled</option>
+        </select>
+    </form>
+    
+    <section class="py-5 bg-light">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5" *ngFor="let x of prods">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src={{x?.image}} alt="product image" />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">{{x?.name}}</h5>
+                                <!-- Product price-->
+                                $40.00 - $80.00
+                            </div>
                         </div>
-                    </div>
-                    <!-- Product actions-->
-                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" [routerLink]="['/item/'+x?._id]">View options</a></div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto rounded-4" [routerLink]="['/item/'+x?._id]">View options</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
 <app-footer></app-footer>
