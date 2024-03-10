@@ -18,6 +18,10 @@ const productSchema = mongoose.Schema(
         type: Number,
         required: [true, 'Please add a description'],
     },
+    image: {
+        type: String,
+        required: [true, 'Please add a image']
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,

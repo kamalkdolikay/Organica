@@ -19,27 +19,26 @@
     </select>
 </form>
 
-<div class="container" id="main_con">
-    <table class="table table-condensed table-fixed user-table faq-table dataTable">
-        <tbody>
-            
-            <tr *ngFor="let x of prods">
-                <td width="10%">
-                    <div>
-                        <!-- <h6><a href="javascript:void(0);" *(click)="route(booking._id, 'view')">{{x?._id}}</a></h6> -->
-                        <h6><a href="javascript:void(0);">{{x?.name}}</a></h6>
-                    <h6>{{x?.current}} / {{x?.min}}</h6>
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
 
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col" *ngFor="let x of prods">
+                <div class="card shadow-sm">
+                    <img src={{x?.image}}>
+                    <div class="card-body">
+                        <p class="card-text">{{x?.name}}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                <!-- <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button> -->
+                            </div>
+                        </div>
                     </div>
-                </td>
-            
-            </tr>
-            <tr>
-                <td>
-                    <div>You've reached the bottom</div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <app-footer></app-footer>
