@@ -1,0 +1,9 @@
+.btn-outline-dark {
+    color: rgba(74, 119, 60);
+    border-color: rgba(74, 119, 60);
+}
+
+.btn-outline-dark:hover {
+    background-color: rgba(74, 119, 60);
+    color: white;
+} 

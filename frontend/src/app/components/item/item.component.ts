@@ -11,10 +11,21 @@ export class ItemComponent implements OnInit {
 
   public productID:any;
   public prods:any;
+  public items:Array<any> = new Array();
   product: any;
 
   constructor( private activatedroute:ActivatedRoute,
     private authService:AuthService ) { }
+
+    // getFirst4Items() {
+    //   console.log("here");
+    //   let items = [];
+
+    //   for(var i = 0; i < 4; i++) {
+    //     items.push(this.prods);
+    //   }
+    //   console.log(items);
+    // }
 
   ngOnInit(): void {
     this.productID = this.activatedroute.snapshot.params['id'];
@@ -32,7 +43,9 @@ export class ItemComponent implements OnInit {
       console.log(data);
         this.prods = data;
       });
-  }
+
+      // this.getFirst4Items();
+    }
 
   compareItem(name:any) {
     if (name == "Naniamo Radishes") {
