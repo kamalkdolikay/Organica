@@ -6,6 +6,10 @@
     margin-bottom: 10px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .consumer-cmp {
     font-family: Nunito;
 }

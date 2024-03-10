@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 
-<div class="consumer-cmp card container rounded-4 p-4 my-5 text-center" id="consumerOrder">
+<div class="consumer-cmp card container rounded-0 p-4 my-5 text-center" id="consumerOrder">
     <!-- <div class="cartItem">
         <img src="./assets/images/banana.png" height="80px">
         <h6>Bananas | Tropicanal Farms</h6>
@@ -15,73 +15,149 @@
     <div class="mb-4 mx-auto">
       <ul class="nav nav-pills">
         <li class="nav-item mx-2">
-          <a class="nav-link rounded-4 bg-green c-white" aria-current="page" href="#">Orders</a>
+            <button class="info-btn bg-green c-white rounded-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#orders" aria-expanded="false" aria-controls="orders">
+                Orders
+            </button>
         </li>
         <li class="nav-item mx-2">
-            <a class="nav-link rounded-4 bg-green c-white" aria-current="page" href="#">Your Info</a>
+            <button class="info-btn bg-green c-white rounded-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#info" aria-expanded="false" aria-controls="info">
+                Your Info
+            </button>
         </li>
     </ul>  
     </div>
     
-
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Product</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
-                <th scope="col">Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Box of Eggs</td>
-                <td>3</td>
-                <td>$5.00</td>
-                <td>$15.00</td>
-            </tr>
-            <tr>
-                <td>Envy Apples</td>
-                <td>8</td>
-                <td>$1.00</td>
-                <td>$8.00</td>
-            </tr>
-            <tr>
-                <td>Celery</td>
-                <td>2</td>
-                <td>$2.00</td>
-                <td>$4.00</td>
-            </tr>
-            <tr>
-                <td><b>TOTAL</b></td>
-                <td></td>
-                <td></td>
-                <td><b>$27.00</b></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="d-flex justify-content-center align-items-center">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true"><i class="bi bi-caret-left-fill"></i></span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true"><i class="bi bi-caret-right-fill"></i></span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <div class="collapse.show" id="orders">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Box of Eggs</td>
+                    <td>3</td>
+                    <td>$5.00</td>
+                    <td>$15.00</td>
+                </tr>
+                <tr>
+                    <td>Envy Apples</td>
+                    <td>8</td>
+                    <td>$1.00</td>
+                    <td>$8.00</td>
+                </tr>
+                <tr>
+                    <td>Celery</td>
+                    <td>2</td>
+                    <td>$2.00</td>
+                    <td>$4.00</td>
+                </tr>
+                <tr>
+                    <td><b>TOTAL</b></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>$27.00</b></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center align-items-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true"><i class="bi bi-caret-left-fill c-black"></i></span>
+                        </a>
+                    </li>
+                    <li class="page-item "><a class="page-link c-black" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link c-black" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link c-black" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true"><i class="bi bi-caret-right-fill c-black"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="collapse" id="info">
+        <h3 class="my-3 text-center">Billing Info</h3>
+        <form>
+            <div class="row">
+                <div class="col">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" id="floatingInput1" placeholder="">
+                        <label for="floatingInput1">First Name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword1" placeholder="">
+                        <label for="floatingPassword1">Last Name</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control rounded-4" name="password" id="floatingPassword2"
+                    placeholder="Password">
+                <label for="floatingPassword2">Address</label>
+            </div>
+            <div class="row d-flex align-items-center mb-4">
+                <div class="col">
+                    <select class="form-select p-3 rounded-4" id="country" required="">
+                        <option value="">Country...</option>
+                        <option>Canada</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="form-select p-3 rounded-4" id="province" required="">
+                        <option value="">Province...</option>
+                        <option>British Columbia</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <div class="form-floating">
+                        <input type="text" class="form-control rounded-4" id="floatingPassword3" placeholder="">
+                        <label for="floatingPassword3">Postal Code</label>
+                    </div>
+                </div>
+                <h3 class="my-3 text-center">Payment Info</h3>
+                <div class="row">
+                    <div class="col">
+                        <label for="inputPassword5" class="form-label">Name on Card</label>
+                        <input type="password" id="inputPassword5" class="form-control">
+                    </div>
+                    <div class="col">
+                        <div class="col">
+                            <label for="inputPassword5" class="form-label">Number on Card</label>
+                            <input type="password" id="inputPassword5" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <label for="inputPassword5" class="form-label">Expiration</label>
+                        <input type="password" id="inputPassword5" class="form-control">
+                    </div>
+                    <div class="col">
+                        <div class="col">
+                            <label for="inputPassword5" class="form-label">CVV</label>
+                            <input type="password" id="inputPassword5" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
-<div class="card container rounded-0 p-4 my-5 text-center">
+<!-- <div class="card container rounded-0 p-4 my-5 text-center">
     <h2></h2>
     <div>
         <p class="my-0">
@@ -162,6 +238,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <app-footer></app-footer>
