@@ -27,6 +27,7 @@ a {
 }
 
 .s23-signin.withsound.s23-signup {
-    color: #fff;
-    background-color: #f74f39;
+    background-color: #fc4f3e;
+    color:white;
+    border: none;
 }

@@ -16,8 +16,14 @@ export class AuthService {
   user: any;
 
   private apiUrl = 'http://localhost:3000/api/users';
+  private apiUrl2 = 'http://localhost:3000/api/products';
+
 
   constructor( private http:HttpClient ) { }
+
+  getProd() {
+    return this.http.get(this.apiUrl2+'/get',httpOptions);
+  }
 
   register(user:any) {
     return this.http.post(this.apiUrl+'/register',user,httpOptions);

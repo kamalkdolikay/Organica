@@ -1,6 +1,13 @@
 #changeBanking {
     padding-top: 10px;
 }
+
 #loginConfirmBtn {
     margin-bottom: 10px;
+}
+
+.cartItems {
+    display:grid;
+    grid-template-columns: 2fr, 8fr;
+    grid-template-rows: 50px, 50px;
 }
