@@ -30,6 +30,17 @@ export class AuthService {
     .pipe(map((res: any) => res));
   }
 
+  getUser() {
+    let httpCustomOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + localStorage.getItem('id_token')
+      })
+    }
+    return this.http.get('http://localhost:3000/api/users/user',httpCustomOptions)
+    .pipe(map((res: any) => res));
+  }
+
   register(user:any) {
     return this.http.post(this.apiUrl+'/register',user,httpOptions);
   }
@@ -49,6 +60,11 @@ export class AuthService {
   loadToken(){
     const token = localStorage.getItem('id_token');
     return token;
+  }
+
+  loadID(){
+    const ID = localStorage.getItem('user');
+    return ID;
   }
 
   logout(){
