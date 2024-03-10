@@ -31,7 +31,7 @@ section {
 }
 
 
-#text-h-size {
+#text-h-size, #text-h-size-last {
     font-size: xxx-large;
 }
 
