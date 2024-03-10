@@ -34,4 +34,20 @@ export class RegisterComponent implements OnInit {
   redirectLogin() {
     this.router.navigate(['/login']);
   }
+
+  loginAfterRegister() {
+    let user = {
+      email: this.email,
+      password: this.password
+    }
+
+    this.authService.login(user).subscribe(data => {
+      if(data.success){
+        this.authService.storeUserData(data.token, data._id)
+        this.router.navigate(['/']);
+      } else {
+        this.router.navigate(['/login']);
+      }
+    }) 
+  }
 }

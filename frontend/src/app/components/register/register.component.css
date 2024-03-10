@@ -19,3 +19,11 @@ ul a:hover {
     border: none;
     padding: 7px 7px;
 }
+
+.btn-primary {
+    border-color: rgba(74, 119, 60);
+}
+
+.btn-primary:hover {
+    background-color: rgba(74, 119, 60);
+}

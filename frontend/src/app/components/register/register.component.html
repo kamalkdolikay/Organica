@@ -30,9 +30,9 @@
                 <label for="floatingPassword">Password</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-4" [(ngModel)]="password" name="password"
-                    id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Confirm Password</label>
+                <input type="password" class="form-control rounded-4" name="password"
+                    id="floatingPassword33" placeholder="Password">
+                <label for="floatingPassword33">Confirm Password</label>
             </div>
             <div>
                 <div class="text-center">
@@ -135,11 +135,29 @@
             </div>
 
             <div class="text-center">
-                <input type="submit" value="Create Account" class="regi-btn mx-auto rounded-4 bg-green c-white">
+                <input type="submit" value="Create Account" class="regi-btn mx-auto rounded-4 bg-green c-white"
+                    data-bs-toggle="modal" data-bs-target="#conf-reg">
                 <h5 class="mt-4">
                     Already have an account?
                 </h5>
                 <a (click)="redirectLogin()">Login ></a>
+            </div>
+            <div class="modal fade" tabindex="-1" id="conf-reg">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Account Register Successful!</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Thank you for choosing Organica. We wonder what you will choose first.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary bg-green" (click)="loginAfterRegister()"
+                                data-bs-dismiss="modal">Continue</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
