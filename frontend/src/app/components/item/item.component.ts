@@ -13,6 +13,8 @@ export class ItemComponent implements OnInit {
   public prods:any;
   public items:Array<any> = new Array(4);
   product: any;
+  isCart: any;
+  quantity: any = 1;
 
   constructor( private activatedroute:ActivatedRoute,
     private authService:AuthService ) {
@@ -25,19 +27,30 @@ export class ItemComponent implements OnInit {
     }
 
     this.authService.getProduct(id).subscribe(data => {
-      console.log('data', data);
       this.product = data[0];
 
     });
 
     this.authService.getProd().subscribe(data=>{
-      console.log(data);
         this.prods = data;
       });
 
     }
 
-    
+    addToCart(){
+      this.isCart = localStorage.getItem('cart');
+      if(this.isCart == null){
+        let arr: any = [];
+        this.product["quantity"] = this.quantity;
+        arr.push(this.product);
+        localStorage.setItem('cart', JSON.stringify(arr));
+      } else {
+        let arr: any = JSON.parse(this.isCart);
+        this.product["quantity"] = this.quantity;
+        arr.push(this.product)
+        localStorage.setItem('cart', JSON.stringify(arr));
+      }
+    }
 
   compareItem(name:any) {
     if (name == "Naniamo Radishes") {

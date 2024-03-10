@@ -46,29 +46,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Box of Eggs</td>
-                    <td>3</td>
-                    <td>$5.00</td>
-                    <td>$15.00</td>
-                </tr>
-                <tr>
-                    <td>Envy Apples</td>
-                    <td>8</td>
-                    <td>$1.00</td>
-                    <td>$8.00</td>
-                </tr>
-                <tr>
-                    <td>Celery</td>
-                    <td>2</td>
-                    <td>$2.00</td>
-                    <td>$4.00</td>
-                </tr>
-                <tr>
-                    <td><b>TOTAL</b></td>
-                    <td></td>
-                    <td></td>
-                    <td><b>$27.00</b></td>
+                <tr *ngFor="let cart of carts">
+                    <td *ngIf="!isProducts" colspan="4">No products in cart to display</td>
+                    <td *ngIf="isProducts">{{cart?.name}}</td>
+                    <td *ngIf="isProducts">{{cart?.quantity}}</td>
+                    <td *ngIf="isProducts">{{cart?.price | currency}}</td>
+                    <td *ngIf="isProducts">{{cart?.quantity * cart?.price | currency}}</td>
                 </tr>
             </tbody>
         </table>
@@ -76,15 +59,15 @@
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
                     <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
+                        <a class="page-link" aria-label="Previous">
                             <span aria-hidden="true"><i class="bi bi-caret-left-fill c-black"></i></span>
                         </a>
                     </li>
-                    <li class="page-item "><a class="page-link c-black" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link c-black" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link c-black" href="#">3</a></li>
+                    <li class="page-item "><a class="page-link c-black" >1</a></li>
+                    <li class="page-item"><a class="page-link c-black" >2</a></li>
+                    <li class="page-item"><a class="page-link c-black" >3</a></li>
                     <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
+                        <a class="page-link" aria-label="Next">
                             <span aria-hidden="true"><i class="bi bi-caret-right-fill c-black"></i></span>
                         </a>
                     </li>
@@ -137,7 +120,7 @@
                 <div class="row">
                     <div class="col">
                         <label for="inputPassword5" class="form-label">Name on Card</label>
-                        <input type="password" id="inputPassword5" class="form-control">
+                        <input type="password" id="inputPassword4" class="form-control">
                     </div>
                     <div class="col">
                         <div class="col">
@@ -149,12 +132,12 @@
                 <div class="row mt-2">
                     <div class="col">
                         <label for="inputPassword5" class="form-label">Expiration</label>
-                        <input type="password" id="inputPassword5" class="form-control">
+                        <input type="password" id="inputPassword6" class="form-control">
                     </div>
                     <div class="col">
                         <div class="col">
                             <label for="inputPassword5" class="form-label">CVV</label>
-                            <input type="password" id="inputPassword5" class="form-control">
+                            <input type="password" id="inputPassword7" class="form-control">
                         </div>
                     </div>
                 </div>

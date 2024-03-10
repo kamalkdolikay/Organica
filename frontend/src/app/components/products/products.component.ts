@@ -8,12 +8,16 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ProductsComponent implements OnInit{
 
+  public isloading: boolean = false;
+
   public prods:any;
   constructor(
     private authService:AuthService) { }
 
     test_f(){
+      this.isloading = true;
       this.authService.getProd().subscribe(data=>{
+        this.isloading = false;
         this.prods = data;
       })
     }

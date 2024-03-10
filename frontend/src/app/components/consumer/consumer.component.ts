@@ -9,6 +9,8 @@ import { AuthService } from '../../services/auth.service';
 export class ConsumerComponent implements OnInit {
   isLogin: boolean = false;
   user!: any;
+  isProducts: boolean = false;
+  carts: any
 
   constructor(
     private authService:AuthService,
@@ -18,5 +20,12 @@ export class ConsumerComponent implements OnInit {
     this.authService.getUser().subscribe(data => {
       this.user = data;
     })
+    let products = localStorage.getItem('cart');
+    if(products == null){
+      this.carts = [{name: 'Add products to cart'}];
+    } else {
+      this.isProducts = true;
+      this.carts = JSON.parse(products);
+    }
   }
 }
