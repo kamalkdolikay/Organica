@@ -24,3 +24,8 @@ section {
     width: 100%;
     padding: 35px 40px 0;
 }
+
+.fss-1 {
+    font-size: 4em;
+    font-family: Nunito
+}

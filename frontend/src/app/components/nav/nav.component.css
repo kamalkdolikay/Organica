@@ -19,3 +19,14 @@ a {
     border: none;
     padding: 7px 11px;
 }
+
+.s23-signin.withsound {
+    border-radius: 60px;
+    transition-duration: .2s;
+    padding: 15px;
+}
+
+.s23-signin.withsound.s23-signup {
+    color: #fff;
+    background-color: #f74f39;
+}
