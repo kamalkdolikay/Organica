@@ -8,3 +8,7 @@ footer {
 .logo {
     height: 50px;
 }
+
+.brand {
+    color: white !important;
+}
