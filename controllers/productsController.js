@@ -4,7 +4,7 @@ const Products = require('../models/productsModel.js');
 const addProduct = asyncHandler(async (req, res) => {
     const { name, price, min, image, current} = req.body
 
-    if(!name || !price || !min) {
+    if(!name || !price || !min || !imgLink) {
         res.status(400)
         res.json({ success: false, message: 'Please add all fields' });
     }

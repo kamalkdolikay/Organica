@@ -1,60 +1,167 @@
 <app-nav></app-nav>
 
-<div class="container my-5 rounded-0 text-center" id="welcome">
-    <h1 class="display-5 fw-bold c-green">Welcome back [consumer name]!</h1>
-    <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Here are the items you have on order.<br></p>
+<div class="consumer-cmp card container rounded-4 p-4 my-5 text-center" id="consumerOrder">
+    <!-- <div class="cartItem">
+        <img src="./assets/images/banana.png" height="80px">
+        <h6>Bananas | Tropicanal Farms</h6>
+    </div> -->
+    <div>
+        <h1 class="display-5 fw-bold c-green">Welcome back, <span id="userName">[name]!</span></h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Here are the items you have on order.<br></p>
+        </div>
     </div>
-</div>
-<div class="card container rounded-0" id="consumerOrder">
-    <div class="cartItem">
-            <img src="./assets/images/banana.png" height="80px">
-            <h6>Bananas | Tropicanal Farms</h6>
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button type="button" class="btn btn-primary">Left</button>
-                <button type="button" class="btn btn-primary">Middle</button>
-                <button type="button" class="btn btn-primary">Right</button>
-            </div>
-    </div>
-    <div class="cartItem">
 
+    <div class="mb-4 mx-auto">
+      <ul class="nav nav-pills">
+        <li class="nav-item mx-2">
+          <a class="nav-link rounded-4 bg-green c-white" aria-current="page" href="#">Orders</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link rounded-4 bg-green c-white" aria-current="page" href="#">Your Info</a>
+        </li>
+    </ul>  
     </div>
-    <div class="cartItem">
+    
 
-    </div>
     <table class="table table-striped">
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-        </tr>
-        <tr>
-            <td>Box of Eggs</td>
-            <td>3</td>
-            <td>$5.00</td>
-            <td>$15.00</td>
-        </tr>
-        <tr>
-            <td>Envy Apples</td>
-            <td>8</td>
-            <td>$1.00</td>
-            <td>$8.00</td>
-        </tr>
-        <tr>
-            <td>Celery</td>
-            <td>2</td>
-            <td>$2.00</td>
-            <td>$4.00</td>
-        </tr>
-        <tr>
-            <td><b>TOTAL</b></td>
-            <td></td>
-            <td></td>
-            <td><b>$27.00</b></td>
-        </tr>
+        <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Box of Eggs</td>
+                <td>3</td>
+                <td>$5.00</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Envy Apples</td>
+                <td>8</td>
+                <td>$1.00</td>
+                <td>$8.00</td>
+            </tr>
+            <tr>
+                <td>Celery</td>
+                <td>2</td>
+                <td>$2.00</td>
+                <td>$4.00</td>
+            </tr>
+            <tr>
+                <td><b>TOTAL</b></td>
+                <td></td>
+                <td></td>
+                <td><b>$27.00</b></td>
+            </tr>
+        </tbody>
     </table>
+    <div class="d-flex justify-content-center align-items-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true"><i class="bi bi-caret-left-fill"></i></span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true"><i class="bi bi-caret-right-fill"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 
+<div class="card container rounded-0 p-4 my-5 text-center">
+    <h2></h2>
+    <div>
+        <p class="my-0">
+            <button class="info-btn bg-green c-white rounded-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Your Billing and Payment Info
+            </button>
+        </p>
+        <div class="mb-3">
+            <div class="collapse" id="collapseExample">
+                <h3 class="my-3 text-center">Billing Info</h3>
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control rounded-4" id="floatingInput1" placeholder="">
+                                <label for="floatingInput1">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control rounded-4" id="floatingPassword1" placeholder="">
+                                <label for="floatingPassword1">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" name="password" id="floatingPassword2"
+                            placeholder="Password">
+                        <label for="floatingPassword2">Address</label>
+                    </div>
+                    <div class="row d-flex align-items-center mb-4">
+                        <div class="col">
+                            <select class="form-select p-3 rounded-4" id="country" required="">
+                                <option value="">Country...</option>
+                                <option>Canada</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <select class="form-select p-3 rounded-4" id="province" required="">
+                                <option value="">Province...</option>
+                                <option>British Columbia</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control rounded-4" id="floatingPassword3" placeholder="">
+                                <label for="floatingPassword3">Postal Code</label>
+                            </div>
+                        </div>
+                        <h3 class="my-3 text-center">Payment Info</h3>
+                        <div class="row">
+                            <div class="col">
+                                <label for="inputPassword5" class="form-label">Name on Card</label>
+                                <input type="password" id="inputPassword5" class="form-control">
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <label for="inputPassword5" class="form-label">Number on Card</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col">
+                                <label for="inputPassword5" class="form-label">Expiration</label>
+                                <input type="password" id="inputPassword5" class="form-control">
+                            </div>
+                            <div class="col">
+                                <div class="col">
+                                    <label for="inputPassword5" class="form-label">CVV</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 <app-footer></app-footer>

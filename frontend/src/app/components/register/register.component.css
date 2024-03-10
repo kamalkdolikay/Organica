@@ -6,7 +6,16 @@ ul a:hover {
     color: black;
 }
 
+.register-cmp {
+    font-family: Nunito;
+}
+
 .regi-btn {
+    border: none;
+    padding: 10px 7px;
+}
+
+.info-btn {
     border: none;
     padding: 10px 7px;
 }
