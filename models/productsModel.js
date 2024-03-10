@@ -16,7 +16,11 @@ const productSchema = mongoose.Schema(
     },
     min: {
         type: Number,
-        required: [true, 'Please add a description'],
+        required: [true, 'Please add a minimum'],
+    },
+    imgLink: {
+        type: String,
+        required: [true, 'Please add a link'],
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
