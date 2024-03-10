@@ -3,3 +3,7 @@ footer {
     position: sticky;
     top: 100%;
 }
+
+.logo {
+    height: 100px;
+}
