@@ -8,13 +8,13 @@
                 <div class="small mb-1">SKU: BST-498</div>
                 <h1 class="display-5 fw-bolder">{{product?.name}}</h1>
                 <div class="fs-5 mb-5">
-                    <span class="text-decoration-line-through">$45.00</span>
-                    <span>$40.00</span>
+                    <!-- <span class="text-decoration-line-through">$45.00</span> -->
+                    <span>${{product?.price}}</span>
                 </div>
                 <p class="lead">{{compareItem(product?.name)}}</p>
                 <p>Farm: {{farm(product?.name)}}</p>
                 <p>Delivey Date: {{delivery(product?.name)}}</p>
-                <p>Requests Needed: 30, Current: 15</p>
+                <p>Requests Needed: {{product?.min}}, Current: {{product?.current}}</p>
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" [(ngModel)]="quantity" style="max-width: 3rem" />
                     <button class="btn btn-outline-dark flex-shrink-0 rounded-4" (click)="addToCart()" type="button" data-bs-toggle="modal" data-bs-target="#order-conf">
