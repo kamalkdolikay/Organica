@@ -43,3 +43,17 @@ footer{
     margin-left: 5vw;
     /* background-color: aquamarine; */
 }
+
+.btn-outline-dark {
+    color: rgba(74, 119, 60);
+    border-color: rgba(74, 119, 60);
+}
+
+.btn-outline-dark:hover {
+    background-color: rgba(74, 119, 60);
+    color: white;
+} 
+
+.search-btn:hover {
+    background-color: rgba(74, 119, 60);
+}
