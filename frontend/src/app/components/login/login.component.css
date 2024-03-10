@@ -2,6 +2,10 @@ a {
     cursor: pointer;
 }
 
+.login-cmp {
+    font-family: Nunito;
+}
+
 .login-card {
     text-align: center;
 }

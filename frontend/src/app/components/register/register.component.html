@@ -1,7 +1,7 @@
 <app-nav></app-nav>
 
-<div class="card container text-center p-5 my-5 rounded-0">
-    <div class="mb-5">
+<div class="register-cmp card container text-center p-5 my-5 rounded-4 w-75">
+    <div class="mb-1">
         <h1 class="mb-4">
             Create an Account
         </h1>
@@ -17,7 +17,7 @@
             <div class="form-floating mb-3">
                 <input type="text" class="form-control rounded-bottom-4" [(ngModel)]="name" name="name"
                     id="floatingName" placeholder="Name">
-                <label for="floatingInput">Name</label>
+                <label for="floatingName">Name</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="email" class="form-control rounded-4" [(ngModel)]="email" name="email" id="floatingInput"
@@ -34,34 +34,90 @@
                     id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Confirm Password</label>
             </div>
+
+            <p class="d-inline-flex gap-1">
+                <button class="info-btn bg-green c-white rounded-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Billing Info
+                </button>
+            </p>
+            <div class="mb-3">
+                <div class="collapse" id="collapseExample">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control rounded-4" id="floatingInput1"
+                                        placeholder="">
+                                    <label for="floatingInput1">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-4" id="floatingPassword1"
+                                        placeholder="">
+                                    <label for="floatingPassword1">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control rounded-4" name="password" id="floatingPassword2"
+                                placeholder="Password">
+                            <label for="floatingPassword2">Address</label>
+                        </div>
+                        <div class="row d-flex align-items-center mb-4">
+                            <div class="col">
+                                <select class="form-select p-3 rounded-4" id="country" required="">
+                                    <option value="">Country...</option>
+                                    <option>Canada</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <select class="form-select p-3 rounded-4" id="province" required="">
+                                    <option value="">Province...</option>
+                                    <option>British Columbia</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control rounded-4" id="floatingPassword3"
+                                        placeholder="">
+                                    <label for="floatingPassword3">Postal Code</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <h3 class="mb-3 text-center">Payment Info</h3>
+                            <div class="row">
+                                <div class="col">
+                                    <label for="inputPassword5" class="form-label">Name on Card</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                                <div class="col">
+                                    <div class="col">
+                                        <label for="inputPassword5" class="form-label">Number on Card</label>
+                                        <input type="password" id="inputPassword5" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col">
+                                    <label for="inputPassword5" class="form-label">Expiration</label>
+                                    <input type="password" id="inputPassword5" class="form-control">
+                                </div>
+                                <div class="col">
+                                    <div class="col">
+                                        <label for="inputPassword5" class="form-label">CVV</label>
+                                        <input type="password" id="inputPassword5" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
             <input type="submit" value="Create Account" class="regi-btn w-50 mx-auto rounded-4 bg-green c-white">
-        </form>
-        <form>
-            <h3 class="mb-3">Billing Address</h3>
-            <div class="row">
-                <div class="col">
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">First Name</label>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="form-floating">
-                        <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Last Name</label>
-                    </div>
-                </div>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-4" [(ngModel)]="password" name="password"
-                    id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Address</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="password" class="form-control rounded-4" [(ngModel)]="password" name="password"
-                    id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Confirm Password</label>
-            </div>
         </form>
     </div>
     <div>
