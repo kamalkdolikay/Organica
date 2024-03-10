@@ -14,7 +14,7 @@
                 <input type="password" class="form-control rounded-4" name="password" [(ngModel)]="password" id="password" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <input type="button" value="Login" class="login-btn w-50 mx-auto rounded-4 bg-green c-white">
+            <input type="button" (click)="onLogin()" value="Login" class="login-btn w-50 mx-auto rounded-4 bg-green c-white">
         </form>
     </div>
     <div class="mb-3">
