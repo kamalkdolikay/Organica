@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 export class ItemComponent implements OnInit {
 
   public productID:any;
+  public prods:any;
   product: any;
 
   constructor( private activatedroute:ActivatedRoute,
@@ -20,11 +21,17 @@ export class ItemComponent implements OnInit {
     let id = {
       id: this.productID
     }
+
     this.authService.getProduct(id).subscribe(data => {
       console.log('data', data);
       this.product = data[0];
 
-    })
+    });
+
+    this.authService.getProd().subscribe(data=>{
+      console.log(data);
+        this.prods = data;
+      });
   }
 
 }
