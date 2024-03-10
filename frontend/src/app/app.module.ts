@@ -13,6 +13,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ItemComponent } from './components/item/item.component';
+import { LoaderComponent } from './components/shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ItemComponent } from './components/item/item.component';
     NavComponent,
     FooterComponent,
     ProductsComponent,
-    ItemComponent
+    ItemComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
