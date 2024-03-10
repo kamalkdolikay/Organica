@@ -5,3 +5,12 @@
 #loginConfirmBtn {
     margin-bottom: 10px;
 }
+
+.consumer-cmp {
+    font-family: Nunito;
+}
+
+.info-btn {
+    border: none;
+    padding: 10px 10px;
+}
