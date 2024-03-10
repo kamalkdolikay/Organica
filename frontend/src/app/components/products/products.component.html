@@ -5,7 +5,7 @@
         <input type="search" id="form1" class="form-control" placeholder="Search for Product" />
     </div>
     <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-        <i class="fas fa-search" onclick="">-></i>
+        <i class="fas fa-search" (click)="test_f()"></i>
     </button>
 </div>
 
@@ -20,73 +20,26 @@
 </form>
 
 <div class="container" id="main_con">
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="../frontend/src/assets/images/farmerHoldingProduce.jpg" height="50">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init onclick="test()">Details</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="../frontend/src/assets/images/healthyFoods.jpg" height="50">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Details</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <table class="table table-condensed table-fixed user-table faq-table dataTable">
+        <tbody>
+            
+            <tr *ngFor="let x of prods">
+                <td width="10%">
+                    <div>
+                        <!-- <h6><a href="javascript:void(0);" *(click)="route(booking._id, 'view')">{{x?._id}}</a></h6> -->
+                        <h6><a href="javascript:void(0);">{{x?.name}}</a></h6>
+                    <h6>{{x?.current}} / {{x?.min}}</h6>
 
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="../frontend/src/assets/images/DefaultGroceries.png" height="50">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Details</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="../frontend/src/assets/images/studentBills.jpg" height="50">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Details</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="./images/image.jpg" height="36">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Details</button>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <img src="./images/image.jpg" height="36">
-                    <p class="card-text"><b>Product Name</b></p>
-                    <p>Filled: x / y</p>
-                    <button type="button" class="btn btn-primary" data-mdb-ripple-init>Details</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                    </div>
+                </td>
+            
+            </tr>
+            <tr>
+                <td>
+                    <div>You've reached the bottom</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 <app-footer></app-footer>
