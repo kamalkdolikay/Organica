@@ -13,6 +13,10 @@ a {
 
 .app-nav {
     height: 100%;
+
+    background-color: white !important;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .log-btn {
@@ -29,4 +33,10 @@ a {
 .s23-signin.withsound.s23-signup {
     color:white;
     border: none;
+}
+
+@media screen and (max-width: 380px) {
+    .s23-signin.withsound {
+        padding: 10px;
+    }
 }

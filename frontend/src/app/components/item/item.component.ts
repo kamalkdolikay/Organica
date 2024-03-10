@@ -71,4 +71,29 @@ export class ItemComponent implements OnInit {
     return "Good product. Very good.";
   }
 
+  farm(name:any) {
+    if (name == "Naniamo Radishes") {
+      return "Aldor Acres Family Farm";
+    } else if (name == "Victoria Sprouts") {
+      return "Ambleside Artisan Farmers’ Market";
+    } else if (name == "Stanley Beans") {
+      return "Anita’s Organic Grain and Flour Mill Ltd";
+    } else if (name == "Brentwood Peas") {
+      return "Arjuna Berry Farms Ltd.";
+    }
+    return "test";
+  }
+
+  delivery(name:any) {
+    if (name == "Naniamo Radishes") {
+      return "Monday, March 18th, 2024";
+    } else if (name == "Victoria Sprouts") {
+      return "Monday, March 25th, 2024";
+    } else if (name == "Stanley Beans") {
+      return "Thursday, March 28th, 2024";
+    } else if (name == "Brentwood Peas") {
+      return "Monday, March 11th, 2024";
+    }
+    return "test";
+  }
 }

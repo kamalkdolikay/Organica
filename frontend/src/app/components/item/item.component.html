@@ -12,6 +12,9 @@
                     <span>$40.00</span>
                 </div>
                 <p class="lead">{{compareItem(product?.name)}}</p>
+                <p>Farm: {{farm(product?.name)}}</p>
+                <p>Delivey Date: {{delivery(product?.name)}}</p>
+                <p>Requests Needed: 30, Current: 15</p>
                 <div class="d-flex">
                     <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                     <button class="btn btn-outline-dark flex-shrink-0 rounded-4" type="button" data-bs-toggle="modal" data-bs-target="#order-conf">
