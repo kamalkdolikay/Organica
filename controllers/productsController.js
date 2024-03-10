@@ -27,7 +27,6 @@ const getProducts = asyncHandler(async (req, res) => {
 });
 
 const getProductsinfo = asyncHandler(async (req, res) => {
-    console.log('id', req.body.is)
     const products = await Products.find({_id: req.body.id});
     res.status(200).json(products);
 })
