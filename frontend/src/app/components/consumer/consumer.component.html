@@ -43,15 +43,17 @@
                     <th scope="col">Quantity</th>
                     <th scope="col">Price</th>
                     <th scope="col">Total</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let cart of carts">
-                    <td *ngIf="!isProducts" colspan="4">No products in cart to display</td>
+                <tr *ngFor="let cart of carts; index as i">
+                    <td *ngIf="!isProducts" colspan="5">No products in cart to display</td>
                     <td *ngIf="isProducts">{{cart?.name}}</td>
                     <td *ngIf="isProducts">{{cart?.quantity}}</td>
                     <td *ngIf="isProducts">{{cart?.price | currency}}</td>
                     <td *ngIf="isProducts">{{cart?.quantity * cart?.price | currency}}</td>
+                    <td *ngIf="isProducts" (click)="remove(i)"><i class="fa-solid fa-xmark" style="color: red; cursor: pointer;"></i></td>
                 </tr>
             </tbody>
         </table>
