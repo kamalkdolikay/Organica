@@ -11,3 +11,8 @@
 .item-cmp {
     font-family: Nunito;
 }
+
+.main-img {
+    border: 2px solid rgba(74, 119, 60);
+    border-radius: 5px;
+}
