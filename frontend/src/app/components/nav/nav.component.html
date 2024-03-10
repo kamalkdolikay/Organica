@@ -1,8 +1,8 @@
-<nav class="navbar-expand-lg bg-body-tertiary mx-5">
+<nav class="navbar-expand-lg bg-body-tertiary mx-2">
     <div class="d-flex justify-content-between align-items-center app-nav" style="background-color: #f4f3fa;">
         <div>
             <img class="logo mx-2" src="assets/images/logo-green.png" (click)="goHomeBuddy()">
-            <a class="navbar-brand mx-2 fs-2" (click)="goHomeBuddy()">Organica</a>
+            <a id="logo-size" class="navbar-brand mx-2 fs-2" (click)="goHomeBuddy()">Organica</a>
         </div>
         <!-- <div>
             <a class="nav-link active fs-2" aria-current="page" (click)="goHomeBuddy()"><i
@@ -11,7 +11,7 @@
         <div class="d-flex align-items-center">
             <!-- <button *ngIf="!isLogin" type="button" class="log-btn mx-2 fs-5 bg-green c-white rounded-5" (click)="onLogin()">Login</button> -->
             <a *ngIf="!isLogin" [routerLink]="['/login']" id="sign-in" class="s23-signin withsound s23-signup w-inline-block bg-green"><div>Sign In</div></a>
-            <a *ngIf="isLogin" [routerLink]="['/login']" id="sign-in" class="s23-signin withsound s23-signup w-inline-block bg-green" (click)="onLogout()"><div>Log out</div></a>
+            <a *ngIf="isLogin" [routerLink]="['/login']" id="sign-out" class="s23-signin withsound s23-signup w-inline-block bg-green" (click)="onLogout()"><div>Log out</div></a>
             <a *ngIf="isLogin" class="nav-link active mx-2 fs-1" aria-current="page" (click)="accountPage()"><i
                     class="bi bi-person-circle"></i></a>
         </div>

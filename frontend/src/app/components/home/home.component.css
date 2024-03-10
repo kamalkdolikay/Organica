@@ -7,8 +7,6 @@ section {
 }
 
 .s23-main-body {
-    /* max-width: 600px; */
-    
     background-color: #6962d9;
     border-radius: 32px;
     box-shadow: 0 0 20px #ececf1;
@@ -25,10 +23,28 @@ section {
 
 .s23-app-users-container {
     width: 100%;
-    padding: 35px 40px 0;
 }
 
 .fss-1 {
     font-size: 4em;
-    font-family: Nunito
+    font-family: Nunito;
+}
+
+
+#text-h-size {
+    font-size: xxx-large;
+}
+
+@media screen and (max-width: 380px) {
+    #logo-size {
+        font-size: xxx-large;
+    }
+
+    #text-h-size {
+        font-size: xx-large;
+    }
+
+    #text-h-size-last {
+        font-size: 20pt;
+    }
 }
